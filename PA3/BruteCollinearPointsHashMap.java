@@ -1,15 +1,9 @@
-// import java.util.ArrayList;
-import java.util.List;
-import java.util.Arrays;
-import java.lang.NullPointerException;
-import java.lang.IllegalArgumentException;
-import java.util.HashSet;
-import java.util.HashMap;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
 
-public class BruteCollinearPoints {
-  // private HashMap<Double, ArrayList<Point>> map = new HashMap<>();
-  private HashMap<Double, HashSet<Point>> map = new HashMap<>();
+public class BruteCollinearPointsHashMap {
+  private final HashMap<Double, HashSet<Point>> map = new HashMap<>();
 
   private void checkInput(Point[] points) {
     if (points == null) throw new NullPointerException();
@@ -21,7 +15,7 @@ public class BruteCollinearPoints {
     }
   }
 
-  public BruteCollinearPoints(Point[] points) {
+  public BruteCollinearPointsHashMap(Point[] points) {
      checkInput(points);
 
      // finds all line segments containing 4 points

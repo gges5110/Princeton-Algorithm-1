@@ -1,11 +1,8 @@
-import java.lang.NullPointerException;
-import java.lang.IllegalArgumentException;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BruteCollinearPoints {
-  private ArrayList<LineSegment> list = new ArrayList<>();
+  private final ArrayList<LineSegment> list = new ArrayList<>();
   private Point[] mutable_points;
 
   private void checkInput(Point[] points) {
